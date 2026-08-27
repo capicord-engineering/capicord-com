@@ -1,20 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const inter = Inter({
+// Matches lendcord-ui's font choice exactly — only 400/500/700 are loaded there (600 is
+// deliberately skipped so font-semibold's 500 override in globals.css resolves to a real
+// loaded weight, not a synthesized faux-bold).
+const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
   display: "swap",
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1A2744",
+  themeColor: "#0a2240",
 };
 
 export const metadata: Metadata = {
@@ -111,7 +114,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+    <html lang="en" className={`${roboto.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"

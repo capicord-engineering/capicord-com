@@ -1,13 +1,24 @@
 @import "tailwindcss";
 
+/*
+ * Synced with lendcord-ui's design system (packages/concord/src/tokens/colors.ts,
+ * apps/marketing/app/globals.css) — Capicord (parent company) and Lendcord (its brand)
+ * share one visual identity. teal = Lendcord's accent-600 (the M3 primary role token),
+ * teal-dark = accent-700 (darkens on hover, same ramp), navy = marketing's brand-navy,
+ * site-bg = the design system's "surface" token (recessed panel level), site-text/muted
+ * = text/text-muted. font-weight-semibold pinned to 500 (Roboto Medium) rather than
+ * Tailwind's default 600 — matches lendcord-ui's own reasoning: 600 isn't a loaded
+ * Roboto weight, so the browser would synthesize a faux-bold instead.
+ */
 @theme {
-  --color-navy: #1A2744;
-  --color-teal: #1A9378;
-  --color-teal-dark: #157a63;
-  --color-site-bg: #F8F9FB;
-  --color-site-text: #1A1A2E;
-  --color-muted: #64748B;
-  --font-sans: "Inter", sans-serif;
+  --color-navy: #0a2240;
+  --color-teal: #0E6B5C;
+  --color-teal-dark: #0B574B;
+  --color-site-bg: #F7F7F4;
+  --color-site-text: #111827;
+  --color-muted: #6B7280;
+  --font-sans: "Roboto", system-ui, -apple-system, sans-serif;
+  --font-weight-semibold: 500;
 }
 
 html {

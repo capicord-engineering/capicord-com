@@ -59,11 +59,11 @@ export default function Home() {
                     <>
                       {/* Down arrow on mobile */}
                       <svg className="sm:hidden" width="14" height="20" viewBox="0 0 14 20" fill="none" aria-hidden="true">
-                        <path d="M7 0v16M1 10l6 8 6-8" stroke="#1A9378" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M7 0v16M1 10l6 8 6-8" stroke="#0E6B5C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       {/* Right arrow on desktop */}
                       <svg className="hidden sm:block" width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
-                        <path d="M0 7h16M10 1l7 6-7 6" stroke="#1A9378" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M0 7h16M10 1l7 6-7 6" stroke="#0E6B5C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </>
                   )}

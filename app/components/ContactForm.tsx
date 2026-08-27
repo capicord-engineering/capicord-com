@@ -125,8 +125,8 @@ export default function ContactForm() {
     return (
       <div className="text-center py-6" role="status" aria-live="polite">
         <svg className="mx-auto mb-4" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <circle cx="20" cy="20" r="19" stroke="#1A9378" strokeWidth="2" />
-          <path d="M12 20l6 6 10-12" stroke="#1A9378" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="20" cy="20" r="19" stroke="#0E6B5C" strokeWidth="2" />
+          <path d="M12 20l6 6 10-12" stroke="#0E6B5C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         <p className="text-xl font-semibold text-teal mb-2">Message sent!</p>
         <p className="text-muted text-[15px]">We'll get back to you within 1 business day.</p>

@@ -1,0 +1,45 @@
+name: Deploy to production
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+permissions:
+  id-token: write # required for aws-actions/configure-aws-credentials' OIDC AssumeRole
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      # No long-lived AWS keys anywhere — see lendcord-infra/docs/decisions and
+      # modules/iam's github_capicord_deploy trust policy (scoped to this repo + main
+      # branch only).
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.CAPICORD_DEPLOY_ROLE_ARN }}
+          aws-region: ap-south-1
+
+      # `next build` with output: "export" writes the static site to ./out.
+      - run: |
+          aws s3 sync out "s3://${{ vars.CAPICORD_S3_BUCKET }}" --delete --exact-timestamps
+
+      - run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ vars.CAPICORD_CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --paths "/*"

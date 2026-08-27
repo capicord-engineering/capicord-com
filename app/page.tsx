@@ -2,10 +2,9 @@ import Navbar from "./components/Navbar";
 import ContactForm from "./components/ContactForm";
 
 const NAV_LINKS = [
-  { label: "How it Works", href: "#how-it-works" },
-  { label: "For Borrowers", href: "#borrowers" },
-  { label: "For Agents", href: "#agents" },
-  { label: "For Partners", href: "#partners" },
+  { label: "About", href: "#about" },
+  { label: "Our Brands", href: "#brands" },
+  { label: "What We Stand For", href: "#principles" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -34,55 +33,45 @@ export default function Home() {
               Credit, Connected.
             </h1>
             <p className="text-[clamp(16px,2.5vw,20px)] text-muted max-w-xl mx-auto leading-[1.7] mb-10">
-              Access credit from trusted, RBI-regulated NBFC partners — with minimal paperwork,
-              transparent terms, and real-time status tracking. Built for borrowers, agents, and
-              lenders across India.
+              Capicord Technologies Pvt Ltd is a technology holding company building regulated,
+              RBI-compliant fintech brands for India. Our flagship brand, Lendcord, connects
+              borrowers, agents, and NBFC lending partners through a transparent digital platform.
             </p>
 
-            {/* Borrower → Capicord → NBFC flow — vertical on mobile, horizontal on desktop */}
+            {/* Capicord → Lendcord — parent company to lending brand */}
             <div
               className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-10"
-              aria-label="How Capicord connects borrowers to NBFCs"
+              aria-label="Capicord is the parent company of Lendcord"
             >
-              {(["Borrower", "Capicord", "NBFC"] as const).map((node, i, arr) => (
-                <div key={node} className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
-                  <div
-                    className={`px-5 py-2.5 rounded-lg text-[15px] font-semibold border w-36 sm:w-auto text-center ${
-                      node === "Capicord"
-                        ? "bg-navy text-white border-navy"
-                        : "bg-site-bg text-navy border-slate-200"
-                    }`}
-                  >
-                    {node}
-                  </div>
-                  {i < arr.length - 1 && (
-                    <>
-                      {/* Down arrow on mobile */}
-                      <svg className="sm:hidden" width="14" height="20" viewBox="0 0 14 20" fill="none" aria-hidden="true">
-                        <path d="M7 0v16M1 10l6 8 6-8" stroke="#0E6B5C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      {/* Right arrow on desktop */}
-                      <svg className="hidden sm:block" width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
-                        <path d="M0 7h16M10 1l7 6-7 6" stroke="#0E6B5C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </>
-                  )}
-                </div>
-              ))}
+              <div className="px-5 py-2.5 rounded-lg text-[15px] font-semibold border w-40 sm:w-auto text-center bg-navy text-white border-navy">
+                Capicord
+              </div>
+              {/* Down arrow on mobile */}
+              <svg className="sm:hidden" width="14" height="20" viewBox="0 0 14 20" fill="none" aria-hidden="true">
+                <path d="M7 0v16M1 10l6 8 6-8" stroke="#0E6B5C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              {/* Right arrow on desktop */}
+              <svg className="hidden sm:block" width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+                <path d="M0 7h16M10 1l7 6-7 6" stroke="#0E6B5C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <div className="px-5 py-2.5 rounded-lg text-[15px] font-semibold border w-40 sm:w-auto text-center bg-site-bg text-navy border-slate-200">
+                Lendcord
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="#contact"
+                href="https://lendcord.in"
+                rel="noopener noreferrer"
                 className="bg-teal hover:bg-teal-dark text-white font-semibold text-[16px] px-8 py-3.5 rounded-lg transition-colors no-underline text-center"
               >
-                Apply for a Loan
+                Visit Lendcord
               </a>
               <a
                 href="#contact"
                 className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold text-[16px] px-8 py-3.5 rounded-lg transition-colors no-underline text-center"
               >
-                Become an Agent
+                Get in Touch
               </a>
             </div>
           </div>
@@ -95,39 +84,39 @@ export default function Home() {
         >
           <p className="text-[13px] text-muted font-medium tracking-wide text-center">
             RBI Digital Lending Guidelines Compliant&nbsp;&nbsp;·&nbsp;&nbsp;
-            Transparent Pricing&nbsp;&nbsp;·&nbsp;&nbsp;256-bit Data
-            Encryption&nbsp;&nbsp;·&nbsp;&nbsp;Partnered with Licensed NBFCs
+            Group-Level Data Governance&nbsp;&nbsp;·&nbsp;&nbsp;256-bit Data
+            Encryption&nbsp;&nbsp;·&nbsp;&nbsp;Powering Regulated NBFC Partnerships
           </p>
         </aside>
 
-        {/* ── HOW IT WORKS ── */}
-        <section id="how-it-works" aria-labelledby="how-it-works-heading" className="bg-white px-5 py-14 md:py-20">
+        {/* ── ABOUT ── */}
+        <section id="about" aria-labelledby="about-heading" className="bg-white px-5 py-14 md:py-20">
           <div className="max-w-[1100px] mx-auto">
             <h2
-              id="how-it-works-heading"
+              id="about-heading"
               className="text-center text-[clamp(26px,4vw,36px)] font-bold text-navy tracking-[-0.5px] mb-14"
             >
-              How Capicord Works
+              About Capicord
             </h2>
             <ol
               className="grid grid-cols-1 md:grid-cols-3 gap-10 list-none m-0 p-0"
-              aria-label="Three steps to get a loan through Capicord"
+              aria-label="What Capicord does"
             >
               {[
                 {
                   n: 1,
-                  title: "Register in Minutes",
-                  body: "Create your profile with basic KYC documents — PAN card and address proof. Our digital onboarding takes under 5 minutes, with help from a Capicord agent if needed.",
+                  title: "Building Regulated Fintech",
+                  body: "We design and operate technology platforms for regulated digital lending, built from the ground up for compliance with RBI's Digital Lending Guidelines.",
                 },
                 {
                   n: 2,
-                  title: "Get Matched & Verified",
-                  body: "We assess your application against our credit framework and route it to the most suitable NBFC lending partner — based on your profile, loan type, and tenure.",
+                  title: "Group-Level Compliance & Oversight",
+                  body: "Every brand under Capicord operates under a shared compliance, data-security, and governance framework — audited consistently across the group, not brand by brand.",
                 },
                 {
                   n: 3,
-                  title: "Receive Funds Directly",
-                  body: "Your NBFC partner reviews, approves, and disburses directly to your bank account. Track every stage in real time through your Capicord dashboard.",
+                  title: "One Team, Many Brands",
+                  body: "Starting with Lendcord, Capicord is building a portfolio of consumer and business fintech brands for India's credit ecosystem.",
                 },
               ].map((step) => (
                 <li key={step.n} className="flex flex-col gap-5">
@@ -147,57 +136,42 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── FOR WHOM ── */}
-        <section id="borrowers" aria-labelledby="for-whom-heading" className="bg-site-bg px-5 py-14 md:py-20">
+        {/* ── OUR BRANDS ── */}
+        <section id="brands" aria-labelledby="brands-heading" className="bg-site-bg px-5 py-14 md:py-20">
           <div className="max-w-[1100px] mx-auto">
             <h2
-              id="for-whom-heading"
+              id="brands-heading"
               className="text-center text-[clamp(26px,4vw,36px)] font-bold text-navy tracking-[-0.5px] mb-14"
             >
-              Built for Everyone in the Credit Journey
+              Our Brands
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
-              {[
-                {
-                  id: "borrowers-card",
-                  title: "For Borrowers",
-                  body: "Personal loans, business loans, or your first credit experience — Capicord connects you to India's top NBFC lenders with transparent rates, zero hidden fees, and a fully digital process. Know exactly what you owe, upfront.",
-                  cta: "Apply for a Loan →",
-                },
-                {
-                  id: "agents",
-                  title: "For Agents & DSAs",
-                  body: "Build your lending portfolio with a platform designed for field agents. Submit applications, track borrower KYC, monitor commission payouts, and get real-time application status — all from a single dashboard.",
-                  cta: "Become an Agent →",
-                },
-                {
-                  id: "partners",
-                  title: "For NBFC Partners",
-                  body: "Receive a curated, creditworthy borrower pipeline with verified KYC, structured documentation, and digital audit trails — reducing your cost-per-acquisition and onboarding time significantly.",
-                  cta: "Partner With Us →",
-                },
-              ].map((card) => (
-                <article
-                  key={card.id}
-                  id={card.id}
-                  className="bg-white rounded-xl border border-slate-200 p-6 md:p-9 flex flex-col gap-4"
+            <div className="max-w-2xl mx-auto">
+              <article className="bg-white rounded-xl border border-slate-200 p-8 md:p-10 flex flex-col gap-4 text-center">
+                <p className="text-[13px] font-semibold text-teal uppercase tracking-widest">
+                  Flagship Brand
+                </p>
+                <h3 className="text-2xl font-bold text-navy">Lendcord</h3>
+                <p className="text-muted leading-[1.7] text-[15px]">
+                  Lendcord is Capicord&apos;s Lending Service Provider (LSP), connecting borrowers,
+                  DSA agents, and NBFC lending partners through a transparent, fully digital
+                  platform — minimal paperwork, upfront pricing, and real-time application
+                  tracking. Lendcord does not lend money directly; all lending is carried out by
+                  partner NBFCs registered with and regulated by the Reserve Bank of India.
+                </p>
+                <a
+                  href="https://lendcord.in"
+                  rel="noopener noreferrer"
+                  className="mt-2 self-center bg-teal hover:bg-teal-dark text-white font-semibold text-[15px] px-6 py-2.5 rounded-lg no-underline transition-colors"
                 >
-                  <h3 className="text-xl font-bold text-navy">{card.title}</h3>
-                  <p className="text-muted leading-[1.7] text-[15px] flex-1">{card.body}</p>
-                  <a
-                    href="#contact"
-                    className="text-teal hover:text-teal-dark font-semibold text-[15px] no-underline transition-colors"
-                  >
-                    {card.cta}
-                  </a>
-                </article>
-              ))}
+                  Visit Lendcord →
+                </a>
+              </article>
             </div>
           </div>
         </section>
 
         {/* ── KEY PRINCIPLES ── */}
-        <section aria-labelledby="principles-heading" className="bg-white px-5 py-14 md:py-20">
+        <section id="principles" aria-labelledby="principles-heading" className="bg-white px-5 py-14 md:py-20">
           <div className="max-w-[1100px] mx-auto">
             <h2
               id="principles-heading"
@@ -209,19 +183,19 @@ export default function Home() {
               {[
                 {
                   title: "Transparency First",
-                  body: "Interest rates, processing fees, and repayment schedules are disclosed upfront — before you sign. No surprises, no hidden charges.",
+                  body: "Every brand we build discloses interest rates, fees, and repayment terms upfront — no hidden charges, ever.",
                 },
                 {
-                  title: "Top-Quality Credit Assessment",
-                  body: "We follow a robust credit framework to match borrowers to the right lenders — reducing risk for NBFC partners and improving approval rates for borrowers.",
+                  title: "Compliance by Design",
+                  body: "We embed regulatory compliance — RBI Digital Lending Guidelines, data protection, KYC — into our platforms from day one, not as an afterthought.",
                 },
                 {
                   title: "Mobile-First, India-First",
-                  body: "Complete your entire application from a smartphone. Built for real India — minimal paperwork, vernacular support, and agent-assisted onboarding for first-time borrowers.",
+                  body: "Every product we build is designed for real India — mobile-first, vernacular-ready, and accessible to first-time digital users.",
                 },
                 {
-                  title: "Regulatory Compliance",
-                  body: "Capicord operates strictly under RBI Digital Lending Guidelines. All data is encrypted, processed securely, and handled per applicable data protection requirements.",
+                  title: "Built for the Long Term",
+                  body: "We partner with regulated NBFCs and invest in durable, secure technology — built to last, not to chase short-term growth.",
                 },
               ].map((p) => (
                 <li key={p.title} className="bg-site-bg rounded-xl border border-slate-200 p-6 md:p-8">
@@ -242,15 +216,18 @@ export default function Home() {
             >
               Get in Touch
             </h2>
-            <p className="text-center text-muted text-[15px] mb-12">
-              We typically respond within 1 business day.
+            <p className="text-center text-muted text-[15px] mb-3">
+              For partnerships, media, and general questions about Capicord and its brands.
+            </p>
+            <p className="text-center text-muted text-[14px] mb-12">
+              Looking for a loan, or want to become an agent? <a href="https://lendcord.in" rel="noopener noreferrer" className="text-teal hover:text-teal-dark font-semibold no-underline transition-colors">Visit Lendcord directly →</a>
             </p>
 
             {/* Contact info cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-14 max-w-2xl mx-auto">
               <div className="bg-white border border-slate-200 rounded-xl px-6 py-6 text-center">
                 <p className="text-[13px] font-semibold text-muted uppercase tracking-widest mb-2">
-                  Borrowers, Agents &amp; Partners
+                  General &amp; Partnership Inquiries
                 </p>
                 <p className="text-[15px] text-navy font-medium">Fill in the form below — we read every message.</p>
               </div>
@@ -324,13 +301,14 @@ export default function Home() {
           <hr className="border-none bg-slate-700 h-px mb-6" />
 
           <p className="text-[13px] text-slate-500 text-center mb-4">
-            © 2025 Capicord Fintech Pvt. Ltd. All rights reserved.&nbsp;&nbsp;·&nbsp;&nbsp;RBI
+            © 2025 Capicord Technologies Pvt Ltd. All rights reserved.&nbsp;&nbsp;·&nbsp;&nbsp;RBI
             Digital Lending Guidelines Compliant
           </p>
           <p className="text-[12px] text-slate-600 text-center leading-[1.6] max-w-2xl mx-auto">
-            Capicord is a Lending Service Provider (LSP). Capicord does not lend money, approve
-            loans, or disburse funds. All lending is done by our partner NBFCs who are registered
-            and regulated by the Reserve Bank of India.
+            Capicord Technologies Pvt Ltd is a technology holding company. Lendcord, a brand
+            operated by Capicord, is a Lending Service Provider (LSP). Lendcord does not lend
+            money, approve loans, or disburse funds. All lending is done by our partner NBFCs who
+            are registered and regulated by the Reserve Bank of India.
           </p>
         </div>
       </footer>

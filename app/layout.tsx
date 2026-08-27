@@ -23,30 +23,26 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://capicord.in"),
   title: {
-    default: "Capicord — Credit, Connected.",
+    default: "Capicord — Building India's Credit Infrastructure",
     template: "%s | Capicord",
   },
   description:
-    "Capicord is India's digital Lending Service Provider (LSP) connecting borrowers, DSA agents, and NBFC partners through a transparent, RBI-compliant technology platform. Apply for a loan or partner with us today.",
+    "Capicord Technologies Pvt Ltd is a technology holding company building regulated fintech brands for India. Lendcord, its flagship Lending Service Provider (LSP), connects borrowers, DSA agents, and NBFC partners through a transparent, RBI-compliant platform.",
   keywords: [
+    "Capicord",
+    "Capicord Technologies",
+    "fintech holding company India",
+    "Lendcord",
     "lending service provider",
     "LSP India",
-    "digital lending",
-    "loan application India",
-    "NBFC partner",
-    "DSA agent platform",
+    "digital lending infrastructure",
     "RBI compliant lending",
     "fintech India",
-    "loan origination",
-    "KYC verification",
-    "financial inclusion India",
-    "small business loan",
-    "microfinance India",
-    "Capicord",
+    "NBFC technology partner",
   ],
-  authors: [{ name: "Capicord Fintech Pvt. Ltd." }],
-  creator: "Capicord Fintech Pvt. Ltd.",
-  publisher: "Capicord Fintech Pvt. Ltd.",
+  authors: [{ name: "Capicord Technologies Pvt Ltd" }],
+  creator: "Capicord Technologies Pvt Ltd",
+  publisher: "Capicord Technologies Pvt Ltd",
   robots: {
     index: true,
     follow: true,
@@ -65,18 +61,18 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://capicord.in",
     siteName: "Capicord",
-    title: "Capicord — Credit, Connected.",
+    title: "Capicord — Building India's Credit Infrastructure",
     description:
-      "India's digital Lending Service Provider connecting borrowers, agents, and NBFC partners through a transparent, RBI-compliant platform. Apply for a loan or become a Capicord agent today.",
+      "Capicord Technologies Pvt Ltd builds regulated fintech brands for India. Lendcord, its flagship LSP, connects borrowers, agents, and NBFC partners through a transparent, RBI-compliant platform.",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
     site: "@capi_cord",
     creator: "@capi_cord",
-    title: "Capicord — Credit, Connected.",
+    title: "Capicord — Building India's Credit Infrastructure",
     description:
-      "India's digital Lending Service Provider connecting borrowers, agents, and NBFC partners through a transparent, RBI-compliant platform.",
+      "Capicord Technologies Pvt Ltd builds regulated fintech brands for India, starting with Lendcord — its flagship Lending Service Provider.",
   },
   category: "finance",
 };
@@ -86,19 +82,24 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "FinancialService",
+    "@type": "Organization",
     name: "Capicord",
-    alternateName: "Capicord Fintech Pvt. Ltd.",
+    legalName: "Capicord Technologies Pvt Ltd",
     url: "https://capicord.in",
     description:
-      "Capicord is a Lending Service Provider (LSP) in India connecting borrowers, DSA agents, and NBFC lending partners through technology.",
+      "Capicord Technologies Pvt Ltd is a technology holding company building regulated fintech brands for India — starting with Lendcord, its Lending Service Provider (LSP) connecting borrowers, DSA agents, and NBFC lending partners.",
     slogan: "Credit, Connected.",
     foundingDate: "2025",
     areaServed: {
       "@type": "Country",
       name: "India",
     },
-    serviceType: "Lending Service Provider",
+    brand: {
+      "@type": "Brand",
+      name: "Lendcord",
+      url: "https://lendcord.in",
+      description: "Lendcord is Capicord's flagship Lending Service Provider (LSP), connecting borrowers, agents, and NBFC partners.",
+    },
     contactPoint: [
       {
         "@type": "ContactPoint",

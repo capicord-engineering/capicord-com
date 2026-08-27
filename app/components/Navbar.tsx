@@ -5,10 +5,9 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import * as Dialog from "@radix-ui/react-dialog";
 
 const NAV_LINKS = [
-  { label: "How it Works", href: "#how-it-works" },
-  { label: "For Borrowers", href: "#borrowers" },
-  { label: "For Agents", href: "#agents" },
-  { label: "For Partners", href: "#partners" },
+  { label: "About", href: "#about" },
+  { label: "Our Brands", href: "#brands" },
+  { label: "What We Stand For", href: "#principles" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -62,10 +61,11 @@ export default function Navbar() {
             ))}
           </NavigationMenu.List>
           <a
-            href="#contact"
+            href="https://lendcord.in"
+            rel="noopener noreferrer"
             className="bg-teal hover:bg-teal-dark text-white text-[15px] font-semibold px-5 py-2 rounded-md transition-colors no-underline"
           >
-            Get Started
+            Visit Lendcord
           </a>
         </NavigationMenu.Root>
 
@@ -100,11 +100,12 @@ export default function Navbar() {
                   </a>
                 ))}
                 <a
-                  href="#contact"
+                  href="https://lendcord.in"
+                  rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
                   className="mt-5 block bg-teal hover:bg-teal-dark text-white font-semibold px-6 py-3 rounded-md text-center no-underline transition-colors"
                 >
-                  Get Started
+                  Visit Lendcord
                 </a>
               </nav>
             </Dialog.Content>

@@ -51,9 +51,10 @@ function FieldError({ id, msg }: { id: string; msg?: string }) {
 }
 
 const ROLE_LABELS: Record<string, string> = {
-  borrower: "Borrower",
-  agent: "Agent / DSA",
-  nbfc: "NBFC Partner",
+  partner: "Prospective Partner / NBFC",
+  investor: "Investor",
+  press: "Press / Media",
+  general: "General Inquiry",
 };
 
 export default function ContactForm() {

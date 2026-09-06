@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://capicord.in/sitemap.xml",
-    host: "https://capicord.in",
+    sitemap: "https://capicord.com/sitemap.xml",
+    host: "https://capicord.com",
   };
 }

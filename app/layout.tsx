@@ -21,7 +21,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://capicord.in"),
+  metadataBase: new URL("https://capicord.com"),
   title: {
     default: "Capicord — Building India's Credit Infrastructure",
     template: "%s | Capicord",
@@ -55,11 +55,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://capicord.in",
+    canonical: "https://capicord.com",
   },
   openGraph: {
     type: "website",
-    url: "https://capicord.in",
+    url: "https://capicord.com",
     siteName: "Capicord",
     title: "Capicord — Building India's Credit Infrastructure",
     description:
@@ -85,7 +85,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Capicord",
     legalName: "Capicord Technologies Pvt Ltd",
-    url: "https://capicord.in",
+    url: "https://capicord.com",
     description:
       "Capicord Technologies Pvt Ltd is a technology holding company building regulated fintech brands for India — starting with Lendcord, its Lending Service Provider (LSP) connecting borrowers, DSA agents, and NBFC lending partners.",
     slogan: "Credit, Connected.",

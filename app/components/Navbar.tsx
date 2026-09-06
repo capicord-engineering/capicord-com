@@ -38,12 +38,9 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-[22px] font-bold text-navy tracking-tight no-underline"
-          aria-label="Capicord — go to top"
-        >
-          Capicord
+        <a href="#" className="flex items-center no-underline" aria-label="Capicord — go to top">
+          {/* eslint-disable-next-line @next/next/no-img-element -- static export, no Image loader needed for a fixed-size logo */}
+          <img src="/capicord-logo.svg" alt="Capicord" className="h-8 w-auto" />
         </a>
 
         {/* Desktop navigation */}
